@@ -40,8 +40,15 @@ chrome.extension.onConnect.addListener(
 
 chrome.extension.onRequest.addListener(
   function(connectionInfo) {
+
     selectedText = connectionInfo;
-    makeGmailWin(selectedText);
+
+    makeUserSelectionWin(selectedText);
+
+    // if(localStorage['emailAddresses'])
+    //   makeUserSelectionWin(selectedText);
+    // else
+    //   makeGmailWin(selectedText);
 });
 
 // From = <whatever gmail account is logged in;
@@ -77,6 +84,16 @@ function makeGmailWin(summary) {
                  "&body=" + encodeURIComponent(body);
   chrome.windows.create({
     url: gmailURL,
+    left: 20,
+    top: 30,
+    width: 700,
+    height: 600
+    });
+}
+
+function makeUserSelectionWin(summary) {
+  chrome.windows.create({
+    url: 'users.html',
     left: 20,
     top: 30,
     width: 700,
