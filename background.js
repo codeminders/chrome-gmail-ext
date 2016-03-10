@@ -2,7 +2,7 @@
 
 /**
  * @fileoverview Handles all message communication for the
- * for the background page for the Send from Gmail extension.
+ * for the background page for the Send via Gmail+ extension.
  */
 
 var baseGmailUrl = "https://mail.google.com/";

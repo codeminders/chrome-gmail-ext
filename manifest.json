@@ -4,7 +4,7 @@
    },
    "browser_action": {
       "default_icon": "images/gmail-extension-19.png",
-      "default_title": "Send this link with Gmail"
+      "default_title": "Send this link via Gmail"
    },
    "content_scripts": [ {
       "all_frames": true,
@@ -18,9 +18,9 @@
       "32": "images/gmail-extension-32.png",
       "64": "images/gmail-extension-64.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEbpC6xVrnpwMX7JcommrPGp06qF9/Avm++6lhyDBqMZCItyP00PKdfkGzEU/9RQYlFwbkD/7nD3BvK+hpUDNn+Gv53cexm3ZmvD67GgWSD+bUu/iUcYxTaQ5q6spUpPHUVWA2cjhZLJRYR7QCnVWGVqjEg43PcPfaj1rSS9hliQIDAQAB",
+   "key": "TODO",
    "manifest_version": 2,
-   "name": "Send from Gmail (by Google)",
+   "name": "Send via Gmail+",
    "options_page": "options.html",
    "permissions": [ "tabs", "http://*/*", "https://*/*", "http://*.google.com/" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
