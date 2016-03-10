@@ -3,9 +3,9 @@ function loadSavedOptions() {
     alert("LocalStorage must be enabled for managing options.");
     return;
   }
-  var domainName = localStorage["domainName"];
-  if (domainName) {
-    document.getElementById('domain_info').value = domainName;
+  var emailAddresses = localStorage["emailAddresses"];
+  if (emailAddresses) {
+    document.getElementById('addresses').value = emailAddresses;
   }
   var subjectPrefix = localStorage["subjectPrefix"];
   if (subjectPrefix) {
@@ -14,13 +14,13 @@ function loadSavedOptions() {
 }
 
 function saveOptions() {
-  var domainVal = document.getElementById('domain_info').value; 
-  console.log("Domain - " + domainVal);
-  if ((domainVal != "") && (domainVal.indexOf('.') == -1)) {
-    alert("Does not look like a valid domain - " +
-          domainVal + "\nPlease re-enter");
+  var aVal = document.getElementById('addresses').value; 
+  console.log("Addresses - " + aVal);
+  if ((aVal != "") && (aVal.indexOf('@') == -1)) {
+    alert("Does not look like a valid addesses - " +
+          aVal + "\nPlease re-enter");
   } else {
-    window.localStorage["domainName"] = domainVal;
+    window.localStorage["emailAddresses"] = aVal;
   }
   var subjectPrefix = document.getElementById('subject_prefix').value;
   window.localStorage["subjectPrefix"] = subjectPrefix;
