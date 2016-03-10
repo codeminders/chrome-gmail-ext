@@ -15,7 +15,8 @@ function loadSavedOptions() {
 
 function saveOptions() {
   var aVal = document.getElementById('addresses').value; 
-  console.log("Addresses - " + aVal);
+    console.log("Addresses - " + aVal);
+  /* TODO: better validation */
   if ((aVal != "") && (aVal.indexOf('@') == -1)) {
     alert("Does not look like a valid addesses - " +
           aVal + "\nPlease re-enter");
