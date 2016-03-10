@@ -17,12 +17,14 @@ function saveOptions() {
     var aVal = document.getElementById('addresses').value; 
     console.log("Addresses - " + aVal);
     
-    aList = aVal.split(",").map(function(s) { return s.trim()});
-    if(aList.length=0)
+    if(aVal.indexOf(',') == -1)
     {
-        alert("No addresses found");
+        console.log("Addresses - list not specified, will use default");
+        window.localStorage["emailAddresses"] = "";
     } else
     {
+        aList = aVal.split(",").map(function(s) { return s.trim()});
+        console.log("Addresses " + aList.length + " found");
         lok = true;
         aList.forEach(function(s) {
             if((s != "") && (s.indexOf('@') == -1))
@@ -36,6 +38,7 @@ function saveOptions() {
         if(lok)
             window.localStorage["emailAddresses"] = aVal;
     }
+
     var subjectPrefix = document.getElementById('subject_prefix').value;
     window.localStorage["subjectPrefix"] = subjectPrefix;
     console.log("Saving Subject Prefix - " + subjectPrefix);
