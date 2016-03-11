@@ -1,4 +1,4 @@
-# chrome-gmail-ext
+# Send via Gmail +
 
 Makes Gmail your default email application and provides a button to compose a Gmail message to quickly share a link via email.
 
