@@ -23,9 +23,9 @@ function saveOptions() {
         window.localStorage["emailAddresses"] = "";
     } else
     {
-        aList = aVal.split(",").map(function(s) { return s.trim()});
+        var aList = aVal.split(",").map(function(s) { return s.trim()});
         console.log("Addresses " + aList.length + " found");
-        lok = true;
+        var lok = true;
         aList.forEach(function(s) {
             if((s != "") && (s.indexOf('@') == -1))
             {
